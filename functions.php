@@ -25,4 +25,14 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js');
 
+//Menu Registar
+function register_theme_menus() {
+	register_nav_menus(
+		array(
+			'main-nav'	=> __( 'Main Navigation' ),
+		)
+	);
+}
+add_action ( 'init', 'register_theme_menus');
+
 ?>
