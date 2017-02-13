@@ -35,4 +35,15 @@ function register_theme_menus() {
 }
 add_action ( 'init', 'register_theme_menus');
 
+function create_widget( $name, $id, $description ) {
+	register_sidebar(array(
+		'name' => __( $name ),	 
+		'id' => $id, 
+		'description' => __( $description ),
+		'before_widget' => '<div class="search-bar">',
+		'after_widget' => '</div>',
+	));
+}
+create_widget( 'Header Search', 'header', 'Put the search bar widget in this panel' );
+
 ?>

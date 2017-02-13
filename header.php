@@ -12,19 +12,18 @@
 
   <body <?php body_class(); ?>>
    <header>
-       <nav class="navbar">
-       <div class="container-fluid">  
-            <div class="navbar-header">
+       <nav class="navbar"> 
+            <div class="col-md-2">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
+              <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/hsf-logo.svg"></a>
             </div>
 
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse col-md-7">
             
             <?php
             $args = array(
@@ -36,6 +35,9 @@
             ?>
 
             </div><!--/.navbar-collapse -->
-        </div>
+            <div class="col-md-3">
+              <?php if ( ! dynamic_sidebar ('header') ): endif?>
+            </div>
+        
         </nav>
   </header>
