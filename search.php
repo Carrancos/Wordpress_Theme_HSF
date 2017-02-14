@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-<div class="topbanner">
-    
-  <img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2015/07/AboutUs.jpg" alt="News" />
-
-</div>
 
     <div class="container">
        <div class="row page-header">
@@ -19,12 +14,6 @@
             <h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
           </div>
           
-          <?php echo custom_field_excerpt('three_column_left'); ?>
-          <?php echo custom_field_excerpt_lefthome('left_column_home'); ?>
-          <?php echo custom_field_excerpt_middle('three_column_middle'); ?>
-          <?php echo custom_field_excerpt_middlehome('middle_column_home'); ?>
-          <?php echo custom_field_excerpt_right('three_column_right'); ?>
-          <?php echo custom_field_excerpt_righthome('right_column_home'); ?>
 
         <?php endwhile; else: ?>
           

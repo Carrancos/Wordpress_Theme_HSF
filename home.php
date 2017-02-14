@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-<div class="topbanner">
-    
-  <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/2015/07/AboutUs.jpg" alt="News" />
-
-</div>
   
     <div class="container">
         <div class="col-md-9">
