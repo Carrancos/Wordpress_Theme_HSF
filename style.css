@@ -37,5 +37,11 @@ nav .dropdown:hover ul.sub-menu {
   font-size: 32px;
   text-transform: uppercase;
   font-weight: bold; }
+  .navbar-nav > li > a {
+    padding-top: 70px;
+    padding-bottom: 70px; }
+
+#search-bar {
+  margin-top: 65px; }
 
 /*# sourceMappingURL=style.css.map */
