@@ -17,13 +17,21 @@ Text Domain: Houston Sports Fan
 
 
 $black:#000000;
+$blue:#001a52;
 $white:#FFFFFF;
 
 $font-family: Oswald, Arial, sans-serif;
+$secondaryFont: Helvetica, Arial, sans-serif;
 
+/*========== General ==========*/
 body{
 	font-family:$font-family;
 }
+ol, ul {
+	list-style: disc;
+	margin-left:20px;
+}
+
 header {
 	background-color: $white;
 }
@@ -46,10 +54,32 @@ nav .dropdown:hover ul.sub-menu{
 	text-transform:uppercase;
 	font-weight:bold;
 	&>li>a{
+	color:$blue;
 	padding-top:70px;
 	padding-bottom:70px;
 	}
 }
 #search-bar{
 	margin-top:65px;
+}
+/*========== Singles Product Page ==========*/
+.productIntroBanner{
+	background-color:$blue;
+	color:$white;
+	padding:7px 15px;
+	& h1{
+	margin:0;
+	font-size:28px;
+	}
+}
+.productDescription, .productDetails{
+	& p{
+	font-size:16px;
+	font-family:$secondaryFont;
+	}
+	& h2{
+	background-color:$blue;
+	color:$white;
+	padding:7px 15px;
+	}
 }

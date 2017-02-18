@@ -13,8 +13,13 @@ Text Domain: Houston Sports Fan
 /* # Imports
 ---------------------------------------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+/*========== General ==========*/
 body {
   font-family: Oswald, Arial, sans-serif; }
+
+ol, ul {
+  list-style: disc;
+  margin-left: 20px; }
 
 header {
   background-color: #FFFFFF; }
@@ -38,10 +43,31 @@ nav .dropdown:hover ul.sub-menu {
   text-transform: uppercase;
   font-weight: bold; }
   .navbar-nav > li > a {
+    color: #001a52;
     padding-top: 70px;
     padding-bottom: 70px; }
 
 #search-bar {
   margin-top: 65px; }
+
+/*========== Singles Product Page ==========*/
+.page-header{
+  margin:0 0 40px 0;
+}
+.productIntroBanner {
+  background-color: #001a52;
+  color: #FFFFFF;
+  padding: 7px 15px; }
+  .productIntroBanner h1 {
+    margin: 0;
+    font-size: 28px; }
+
+.productDescription p, .productDetails p {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+.productDescription h2, .productDetails h2 {
+  background-color: #001a52;
+  color: #FFFFFF;
+  padding: 7px 15px; }
 
 /*# sourceMappingURL=style.css.map */
