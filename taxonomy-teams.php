@@ -1,12 +1,37 @@
 <?php get_header(); ?>
   
     <div class="row page-header">
-          <div class="col-sm-12">
+      <div class="container">
+     
+      <div class="col-md-2">
+
+         <?php
+ $term = get_queried_object()->slug;       
+ 
+          if( $term === 'astros') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
+          
+          <?php elseif( $term === 'cougars') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg">
+          
+          <?php elseif( $term === 'rockets') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg">
+          
+          <?php elseif( $term === 'dynamo') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg">
+
+          <?php elseif( $term === 'texans') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg">
+          
+          <?php endif; ?>
+
+      </div>
+          <div class="col-md-10">
             <h1><?php wp_title(); ?></h1>
           </div>
+        </div>
       </div>
       <div class="container">
-      <div class="row">
         <div class="col-md-12">
 
 
@@ -41,7 +66,6 @@
 
         </div>
         
-      </div>
       </div>
 
    <?php get_footer(); ?> 
