@@ -1,18 +1,26 @@
 <?php get_header(); ?>
-
-<div class="row page-header">
-          <div class="col-md-12 productIntroBanner">
+<div class="row page-header productIntroBanner">
+<div class="container">
+          <div class="col-md-12">
           <div class="col-md-2 logo">
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/hsf-logo.svg">
+          <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/hsf-logo.svg">
           </div>
           <div class="col-md-9 offset-md-1">
             <h1><?php the_title(); ?></h1>
+
           </div>
           
           </div>
       </div>
+      </div>
+<div class="container">
+      <div class="row">
+      <?php
+          $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+          echo $term->name; // will show the name
+          echo $term->slug; // will show the slug
 
-      <div class="row">       
+      ?>       
         <div class="col-md-12">
           
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

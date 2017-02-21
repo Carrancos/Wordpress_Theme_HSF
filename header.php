@@ -11,8 +11,8 @@
   </head>
 
   <body <?php body_class(); ?>>
-    <div class="container">
    <header>
+    <div class="container">
        <nav class="navbar row"> 
             <div class="col-md-2">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,9 +36,10 @@
             ?>
 
             </div><!--/.navbar-collapse -->
-            <div class="col-md-3">
-              <?php if ( ! dynamic_sidebar ('header') ): endif?>
+            <div class="col-md-3 pull-right">
+              <?php if ( ! dynamic_sidebar ('header') ): endif ?>
             </div>
         
         </nav>
+    </div>
   </header>

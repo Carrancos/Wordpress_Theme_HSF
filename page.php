@@ -4,6 +4,7 @@
   <img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2015/07/AboutUs.jpg" alt="News" />
 
 </div>
+<div class="container">
       <div class="row page-header optional">
         <div class="container">
           <div class="col-sm-12">

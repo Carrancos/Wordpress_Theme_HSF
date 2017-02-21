@@ -27,6 +27,7 @@ $texansBlue:#00123F;
 $texansRed:#C9243F;
 $dynamoOrange:#F89d3F;
 $cougarsRed:#E61D3A;
+$break-large:1460px;
 
 $font-family: Oswald, Arial, sans-serif;
 $secondaryFont: Helvetica, Arial, sans-serif;
@@ -42,6 +43,12 @@ ol, ul {
 
 header {
 	background-color: $white;
+	& input{
+		padding:3px 7px;
+		&#s{
+			width:80%;
+		}
+	}
 }
 .navbar-toggle{
 	background-color:$black;
@@ -221,4 +228,36 @@ figure.effect-zoe:hover p.icon-links a {
 figure.effect-zoe:hover h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
+}
+/*========== Footer ==========*/
+footer{
+	color:$white;
+	background-color:$blue;
+	padding:30px 0;
+	margin-top:30px;
+}
+.socialicons{
+	font-size:28px;
+	text-align:right;
+	& a {
+	color:$white;
+	text-decoration:none;
+	&:hover{
+		text-decoration:none;
+	}
+	}
+}
+
+/*========== Media Query ==========*/
+
+@media screen and (min-width: $break-large) {
+	.container{
+		width:$break-large - 30px;
+	}
+	.navbar-nav{
+	font-size:32px;
+		&>li>a{
+			padding: 64px 15px;
+		}
+	}
 }

@@ -1,4 +1,5 @@
 <?php get_header(); ?> 
+<div class="container">
 		<div class="col-md-6">
 		    <?php
 		    $posts = get_field('featured_product_1');

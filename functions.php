@@ -25,6 +25,13 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js');
 
+// Allow SVG images
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 //Menu Registar
 function register_theme_menus() {
 	register_nav_menus(
