@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-    <div class="container">
       <div class="row page-header">
           <div class="col-sm-12">
             <h1><?php the_title(); ?></h1>
@@ -28,6 +27,5 @@
         </div>
         <?php get_sidebar('blog'); ?> 
       </div>
-    </div>
 
    <?php get_footer(); ?> 

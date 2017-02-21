@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-  
-    <div class="container">
     <div class="row page-header">
           <div class="col-sm-12">
             <h1><?php wp_title(); ?></h1>

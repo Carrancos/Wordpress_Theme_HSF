@@ -58,17 +58,16 @@ nav .dropdown:hover ul.sub-menu{
 	display: block;
 }
 .navbar-nav{
-	font-size:32px;
+	font-size:28px;
 	text-transform:uppercase;
 	font-weight:bold;
 	&>li>a{
 	color:$blue;
-	padding-top:70px;
-	padding-bottom:70px;
+	padding: 64px 13px;
 	}
 }
 #search-bar{
-	margin-top:65px;
+	margin-top:62px;
 }
 /*========== Singles Product Page ==========*/
 .productIntroBanner{

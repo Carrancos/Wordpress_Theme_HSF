@@ -11,8 +11,9 @@
   </head>
 
   <body <?php body_class(); ?>>
+    <div class="container">
    <header>
-       <nav class="navbar"> 
+       <nav class="navbar row"> 
             <div class="col-md-2">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-    <div class="container">
        <div class="row page-header">
           <div class="col-sm-12">
             <h1><strong>Search Results For:</strong> | <?php the_search_query(); ?></h1>
@@ -30,7 +29,5 @@
         
         <?php get_sidebar('blog'); ?>
         
-      </div>
-      </div>
 
    <?php get_footer(); ?> 
