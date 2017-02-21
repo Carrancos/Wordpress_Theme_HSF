@@ -1,21 +1,42 @@
+<?php 
+  $term = get_field('choose_a_sports_team');
+  $name = $term->name;
+  $slug = $term->slug;
+?>
 <?php get_header(); ?>
-<div class="row page-header productIntroBanner">
+<div class="row page-header productIntroBanner <?php echo($slug); ?>">
 <div class="container">
           <div class="col-md-12">
           <div class="col-md-2 logo">
-          <?php 
-          ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/hsf-logo.svg">
+          
+          <?php if( $name === 'Astros') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
+          
+          <?php elseif( $name === 'Cougars') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg">
+          
+          <?php elseif( $name === 'Rockets') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg">
+          
+          <?php elseif( $name === 'Dynamo') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg">
+
+          <?php elseif( $name === 'Texans') : ?>
+            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg">
+          
+          <?php endif; ?>
           </div>
           <div class="col-md-9 offset-md-1">
             <h1><?php the_title(); ?></h1>
+
           </div>
           
           </div>
       </div>
       </div>
-<div class="container">
-      <div class="row">       
+<div class="container <?php echo($slug); ?>">
+      <div class="row">
+           
         <div class="col-md-12">
           
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -57,5 +78,5 @@
 
         </div>
       </div>
-
+    </div>
    <?php get_footer(); ?> 
