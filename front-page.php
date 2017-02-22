@@ -1,4 +1,23 @@
-<?php get_header(); ?> 
+<?php get_header(); ?>
+<div class="col-xs-12 homeslide clear-pad">
+   <div id="gallery" class="royalSlider rsDefault bannerslider">
+
+  <?php if( have_rows('homepage_banner') ): ?>
+  <?php while ( have_rows('homepage_banner') ) : the_row(); ?>
+            
+  <!-- the_sub_field-->
+
+      <div class="rsContent">
+          <?php $homepageImage = get_sub_field('background_image'); ?>      
+            <img class="rsImg" src="<?php echo $homepageImage['url']; ?>" alt="<?php echo $homepageImage['alt']; ?>" />
+            <p class="rsABlock"><?php the_sub_field('white_text_area'); ?></p>
+      </div>
+
+
+  <?php endwhile; else : ?>
+  <?php endif; ?>
+  </div>
+</div>
 <div class="container">
 		<div class="col-md-6">
 		    <?php
@@ -39,7 +58,7 @@
 	</div>
     <div class="col-md-6">
 	    <?php
-	    $posts = get_field('featured_product_1');
+	    $posts = get_field('featured_product_2');
 	    if($posts):
 			foreach ($posts as $post):
 			setup_postdata($post); 

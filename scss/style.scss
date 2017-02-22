@@ -48,6 +48,9 @@ header {
 		&#s{
 			width:80%;
 		}
+		&.search{
+		  font-family: FontAwesome;
+		}
 	}
 }
 .navbar-toggle{
@@ -87,12 +90,11 @@ nav .dropdown:hover ul.sub-menu{
 	}
 }
 .astros .productDescription,.astros .productDetails{
-	& p{
 	font-size:16px;
 	font-family:$secondaryFont;
-	}
 	& h2{
 	background-color:$astrosBlue;
+	font-family:$font-family;
 	color:$astrosOrange;
 	padding:7px 15px;
 	}

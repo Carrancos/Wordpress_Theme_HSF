@@ -27,6 +27,8 @@ header {
     padding: 3px 7px; }
     header input#s {
       width: 80%; }
+    header input.search {
+      font-family: FontAwesome; }
 
 .navbar-toggle {
   background-color: #000000; }
@@ -62,13 +64,14 @@ nav .dropdown:hover ul.sub-menu {
     margin: 0;
     font-size: 28px; }
 
-.astros .productDescription p, .astros .productDetails p {
+.astros .productDescription, .astros .productDetails {
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif; }
-.astros .productDescription h2, .astros .productDetails h2 {
-  background-color: #062853;
-  color: #F48412;
-  padding: 7px 15px; }
+  .astros .productDescription h2, .astros .productDetails h2 {
+    background-color: #062853;
+    font-family: Oswald, Arial, sans-serif;
+    color: #F48412;
+    padding: 7px 15px; }
 
 .page-header {
   margin: 0px 0 30px; }

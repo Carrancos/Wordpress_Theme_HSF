@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <div class="row page-header productIntroBanner <?php echo($slug); ?>">
 <div class="container">
-          <div class="col-md-12">
+          <div class="col-md-12 row">
           <div class="col-md-2 logo">
           
           <?php if( $name === 'Astros') : ?>
@@ -35,9 +35,8 @@
       </div>
       </div>
 <div class="container <?php echo($slug); ?>">
-      <div class="row">
            
-        <div class="col-md-12">
+        <div class="col-md-12 row">
           
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="col-md-6 productImage">
@@ -77,6 +76,5 @@
 
 
         </div>
-      </div>
     </div>
    <?php get_footer(); ?> 
