@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="col-xs-12 homeslide clear-pad">
+
    <div id="gallery" class="royalSlider rsDefault bannerslider">
 
   <?php if( have_rows('homepage_banner') ): ?>
@@ -8,16 +8,37 @@
   <!-- the_sub_field-->
 
       <div class="rsContent">
-          <?php $homepageImage = get_sub_field('background_image'); ?>      
-            <img class="rsImg" src="<?php echo $homepageImage['url']; ?>" alt="<?php echo $homepageImage['alt']; ?>" />
-            <p class="rsABlock"><?php the_sub_field('white_text_area'); ?></p>
+	<?php $homepageImage = get_sub_field('background_image'); ?> 
+	
+	<img class="rsImg" src="<?php echo $homepageImage['url']; ?>" alt="<?php echo $homepageImage['alt']; ?>" />
+
+
+    <div class="container">
+	    <div class="col-xs-3 bannerLogo">
+	        <?php $imageLeft = get_sub_field('choose_a_logo'); ?> 
+			
+			<img class="img-responsive-sm" src="<?php echo $imageLeft['url']; ?>" alt="<?php echo $imageLeft['alt']; ?>" />
+	    </div>
+	    <div class="col-xs-5 contentArea">
+	         <p><?php the_sub_field('white_text_area'); ?></p>
+	    </div>
+	    <div class="col-xs-4 rightImage">
+
+	    <?php $imageRight = get_sub_field('right_side_photo'); ?> 
+			
+			<img class="img-responsive-sm" src="<?php echo $imageRight['url']; ?>" alt="<?php echo $imageRight['alt']; ?>" />
+
+	    </div>
+	</div>
+ 
+  
       </div>
 
 
   <?php endwhile; else : ?>
   <?php endif; ?>
   </div>
-</div>
+
 <div class="container">
 		<div class="col-md-6">
 		    <?php

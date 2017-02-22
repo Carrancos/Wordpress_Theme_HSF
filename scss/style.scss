@@ -27,6 +27,7 @@ $texansBlue:#00123F;
 $texansRed:#C9243F;
 $dynamoOrange:#F89d3F;
 $cougarsRed:#E61D3A;
+$break-normal:1200px;
 $break-large:1460px;
 
 $font-family: Oswald, Arial, sans-serif;
@@ -40,7 +41,9 @@ ol, ul {
 	list-style: disc;
 	margin-left:20px;
 }
-
+.img-responsive-sm{
+	width:100%;
+}
 header {
 	background-color: $white;
 	& input{
@@ -79,6 +82,16 @@ nav .dropdown:hover ul.sub-menu{
 #search-bar{
 	margin-top:62px;
 }
+/*========== Home Page ==========*/
+.royalSlider {
+  width: 100%;
+  height: 350px;
+  margin-bottom:30px;
+}
+.rsImg{
+	position:absolute;
+}
+
 /*========== Singles Astros Product Page ==========*/
 .productIntroBanner.astros{
 	background-color:$astrosBlue;
@@ -251,6 +264,9 @@ footer{
 }
 
 /*========== Media Query ==========*/
+@media (min-width: $break-normal){
+	
+}
 
 @media screen and (min-width: $break-large) {
 	.container{
@@ -261,5 +277,8 @@ footer{
 		&>li>a{
 			padding: 64px 15px;
 		}
+	}
+	.img-responsive-sm{
+		width:auto;
 	}
 }
