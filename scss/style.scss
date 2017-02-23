@@ -244,6 +244,12 @@ figure.effect-zoe:hover h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
+/*========== Taxonomy Archive ==========*/
+.archive.tax-teams{
+	& .product {
+	border:2px solid #000000;
+	}
+}
 /*========== Footer ==========*/
 footer{
 	color:$white;
