@@ -1,13 +1,11 @@
-<?php get_header(); ?>
-  
-    <div class="row page-header">
+<?php get_header();
+  $term = get_queried_object()->slug;
+  $name = get_queried_object()->name; ?>
+    <div class="row page-header productIntroBanner <?php echo($term); ?>">
       <div class="container">
-     
         <div class="col-md-2">
 
-         <?php 
-
-         $term = get_queried_object()->slug;       
+         <?php       
           
             if( $term === 'astros') : ?>
               <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
@@ -28,7 +26,7 @@
 
         </div>
         <div class="col-md-10">
-          <h1><?php wp_title(); ?></h1>
+          <h1><a href="../">Teams</a> | <?php echo $name ?></h1>
         </div>
     </div>
       </div>
