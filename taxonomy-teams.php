@@ -6,7 +6,6 @@
         <div class="col-md-2">
 
          <?php       
-          
             if( $term === 'astros') : ?>
               <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
             
@@ -32,19 +31,19 @@
       </div>
       <div class="container">
       <?php 
-       
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="col-md-3">
+          <div class="col-md-6">
           <div class="product">
-           <?php if( have_rows('add_images') ): ?>
-            <?php while ( have_rows('add_images') ) : the_row(); ?>
+           <?php if( have_rows('add_images') ): the_row(); ?>            
+             
                   
             <!-- the_sub_field-->
-                  
-              <?php $productImage = get_sub_field('image'); ?>
-              <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $productImage['url']; ?>" alt="<?php echo $productImage['alt']; ?>" /></a>
-             
-              <?php endwhile; else : ?>
+              <?php $productImage = get_sub_field('image');
+              ?>
+              
+              <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $productImage['url']; ?>" alt="<?php echo $productImage['alt']; ?>" /></a> 
+               
+              
             <?php endif; ?>
           </div>
           </div>

@@ -89,15 +89,13 @@
 	      <figure class="effect-zoe">
 	        <a href="<?php the_permalink(); ?>">
 
-	        <?php if( have_rows('add_images') ): ?>
-	        <?php while ( have_rows('add_images') ) : the_row(); ?>
+	        <?php if( have_rows('add_images') ): the_row(); ?>
 	              
 	        <!-- the_sub_field-->
 	               
 	          <?php $productImage = get_sub_field('image'); ?>
 	          <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $productImage['url']; ?>" alt="<?php echo $productImage['alt']; ?>" /></a>
 
-	          <?php endwhile; else : ?>
 	        <?php endif; ?>
 	        	
 	        </a>
