@@ -41,27 +41,20 @@
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="col-md-6 productImage">
           <div class="productSlider rsDefault">
+             
              <?php if( have_rows('add_images') ): ?>
-                <?php while ( have_rows('add_images') ) : the_row(); ?>
-                      
-            <!-- the_sub_field-->
-                   
-              <!-- simple image with thumbnail -->
-    
-    <!-- simple image with thumbnail -->
-    <img class="rsImg" src="https://lh3.googleusercontent.com/dB3Dvgf3VIglusoGJAfpNUAANhTXW8K9mvIsiIPkhJUAbAKGKJcEMPTf0mkSexzLM5o=w300" data-rsTmb="small-image.jpg" alt="image description" />
-
-    <!-- lazy loaded image with thumbnail -->
-    <a class="rsImg" href="image.jpg">image description<img src="small-image.jpg" class="rsTmb" /></a>
-
-    <!-- Image with HTML thumbnail -->
-    <div class="rsContent">
-        <img class="rsImg" src="https://lh3.googleusercontent.com/dB3Dvgf3VIglusoGJAfpNUAANhTXW8K9mvIsiIPkhJUAbAKGKJcEMPTf0mkSexzLM5o=w300" alt="image description" />
-        <div class="rsTmb">Thumbnail HTML content</div>
-    </div>
-    
-              <?php endwhile; else : ?>
-            <?php endif; ?>
+              <?php while ( have_rows('add_images') ) : the_row(); ?>
+                    <?php $image = get_sub_field('image'); ?>
+                
+          <!-- the_sub_field-->
+                 
+              <div class="rsContent">
+                
+                <img class="rsImg" data-rsTmb="<?php echo $image['sizes']['thumbnail']; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']?>" />
+              </div>
+  
+          <?php endwhile; else : ?>
+          <?php endif; ?>
             </div>
             <a href="<?php echo the_field('link'); ?>" class="btn btn-info" role="button" target="_blank">Link Button</a>
           </div>

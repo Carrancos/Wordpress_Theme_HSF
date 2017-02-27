@@ -59,10 +59,17 @@ nav .dropdown:hover ul.sub-menu {
   margin-top: 62px; }
 
 /*========== Home Page ==========*/
-.royalSlider {
+.productSlider {
   width: 100%;
-  height: 350px;
+  height: 600px;
   margin-bottom: 30px; }
+
+.rsDefault .rsThumb {
+  width: 100px;
+  height: 100px; }
+
+.rsDefault .rsThumbsHor {
+  height: 100px; }
 
 .rsImg {
   position: absolute; }

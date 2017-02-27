@@ -26,21 +26,8 @@ jQuery(document).ready(function($) {
   $('.productSlider').royalSlider({
       imageScaleMode: 'fill',
       slidesSpacing: 0,
-      arrowsNav: false,
-      controlNavigation: 'none',
-      fadeinLoadedSlide: false,
-      transitionType: 'fade',
-      loop: 'false',
-      autoPlay: {
-          // autoplay options go gere
-          enabled: false,
-      }
-      autoScaleSlider: true,
-      thumbs: {
-        // thumbnails options go gere
-        spacing: 10,
-        arrowsAutoHide: true
-      }
+      controlNavigation: 'thumbnails',
+      transitionType: 'fade'
   });
 
 
