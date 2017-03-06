@@ -22,7 +22,8 @@ $white:#FFFFFF;
 $gray: #D7D7D7;
 $astrosBlue:#062853;
 $astrosOrange:#F48412;
-$rocketsRed:#D21145;
+$rocketsRed:#CE1141;
+$rocketsSilver:#C4CED3;
 $texansBlue:#00123F;
 $texansRed:#C9243F;
 $dynamoOrange:#F89d3F;
@@ -119,6 +120,82 @@ nav .dropdown:hover ul.sub-menu{
 	background-color:$astrosBlue;
 	font-family:$font-family;
 	color:$astrosOrange;
+	padding:7px 15px;
+	}
+}
+.productIntroBanner.cougars{
+	background-color:$cougarsRed;
+	color:$white;
+	padding:7px 15px;
+	& h1{
+	margin:0;
+	font-size:28px;
+	}
+}
+.cougars .productDescription,.cougars .productDetails{
+	font-size:16px;
+	font-family:$secondaryFont;
+	& h2{
+	background-color:$cougarsRed;
+	font-family:$font-family;
+	color:$white;
+	padding:7px 15px;
+	}
+}
+.productIntroBanner.dynamo{
+	background-color:$dynamoOrange;
+	color:$black;
+	padding:7px 15px;
+	& h1{
+	margin:0;
+	font-size:28px;
+	}
+}
+.dynamo .productDescription,.dynamo .productDetails{
+	font-size:16px;
+	font-family:$secondaryFont;
+	& h2{
+	background-color:$dynamoOrange;
+	font-family:$font-family;
+	color:$black;
+	padding:7px 15px;
+	}
+}
+.productIntroBanner.rockets{
+	background-color:$rocketsSilver;
+	color:$black;
+	padding:7px 15px;
+	& h1{
+	margin:0;
+	font-size:28px;
+	}
+}
+.rockets .productDescription,.rockets .productDetails{
+	font-size:16px;
+	font-family:$secondaryFont;
+	& h2{
+	background-color:$rocketsSilver;
+	font-family:$font-family;
+	color:$black;
+	padding:7px 15px;
+	}
+}
+.productIntroBanner.texans{
+	background-color:$texansBlue;
+	color:$texansRed;
+	padding:7px 15px;
+	& h1{
+	margin:0;
+	font-size:28px;
+	}
+}
+.texans .productDescription,.texans .productDetails{
+	font-size:16px;
+	font-family:$secondaryFont;
+	& h2{
+	background-color:$texansBlue;
+	font-family:$font-family;
+	color:$texansRed;
 	padding:7px 15px;
 	}
 }

@@ -92,6 +92,74 @@ nav .dropdown:hover ul.sub-menu {
     color: #F48412;
     padding: 7px 15px; }
 
+.productIntroBanner.cougars {
+  background-color: #E61D3A;
+  color: #FFFFFF;
+  padding: 7px 15px; }
+  .productIntroBanner.cougars h1 {
+    margin: 0;
+    font-size: 28px; }
+
+.cougars .productDescription, .cougars .productDetails {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+  .cougars .productDescription h2, .cougars .productDetails h2 {
+    background-color: #E61D3A;
+    font-family: Oswald, Arial, sans-serif;
+    color: #FFFFFF;
+    padding: 7px 15px; }
+
+.productIntroBanner.dynamo {
+  background-color: #F89d3F;
+  color: #000000;
+  padding: 7px 15px; }
+  .productIntroBanner.dynamo h1 {
+    margin: 0;
+    font-size: 28px; }
+
+.dynamo .productDescription, .dynamo .productDetails {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+  .dynamo .productDescription h2, .dynamo .productDetails h2 {
+    background-color: #F89d3F;
+    font-family: Oswald, Arial, sans-serif;
+    color: #000000;
+    padding: 7px 15px; }
+
+.productIntroBanner.rockets {
+  background-color: #C4CED3;
+  color: #000000;
+  padding: 7px 15px; }
+  .productIntroBanner.rockets h1 {
+    margin: 0;
+    font-size: 28px; }
+
+.rockets .productDescription, .rockets .productDetails {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+  .rockets .productDescription h2, .rockets .productDetails h2 {
+    background-color: #C4CED3;
+    font-family: Oswald, Arial, sans-serif;
+    color: #000000;
+    padding: 7px 15px; }
+
+.productIntroBanner.texans {
+  background-color: #00123F;
+  color: #C9243F;
+  padding: 7px 15px; }
+  .productIntroBanner.texans h1 {
+    margin: 0;
+    font-size: 28px; }
+
+.texans .productDescription, .texans .productDetails {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+  .texans .productDescription h2, .texans .productDetails h2 {
+    background-color: #00123F;
+    font-family: Oswald, Arial, sans-serif;
+    color: #C9243F;
+    padding: 7px 15px; }
+
 .page-header {
   margin: 0px 0 30px; }
 
