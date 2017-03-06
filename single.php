@@ -6,7 +6,7 @@
           </div>
       </div>
       <div class="row">       
-        <div class="col-md-9">
+        <div class="col-md-12">
           
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           
@@ -25,7 +25,15 @@
 
 
         </div>
-        <?php get_sidebar('blog'); ?> 
       </div>
+    <div class="row">
+      <div class="col-md-12">
+       <?php // If comments are open or we have at least one comment, load up the comment template.
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
 
+        ?>
+      </div>
+    </div>
    <?php get_footer(); ?> 

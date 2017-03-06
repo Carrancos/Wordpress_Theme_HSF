@@ -3,23 +3,28 @@
   $name = get_queried_object()->name; ?>
     <div class="row page-header productIntroBanner <?php echo($term); ?>">
       <div class="container">
-        <div class="col-md-2">
+        <div class="col-md-2 logo text-center">
 
          <?php       
             if( $term === 'astros') : ?>
-              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
             
             <?php elseif( $term === 'cougars') : ?>
-              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
             
             <?php elseif( $term === 'rockets') : ?>
-              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
             
             <?php elseif( $term === 'dynamo') : ?>
-              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
 
             <?php elseif( $term === 'texans') : ?>
-              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
             
             <?php endif; ?>
 
