@@ -14,21 +14,25 @@
 
 
     <div class="container">
+    <div class="col-md-12">
+    <div class="row">
 	    <div class="col-xs-3 bannerLogo">
 	        <?php $imageLeft = get_sub_field('choose_a_logo'); ?> 
 			
-			<img class="img-responsive-sm" src="<?php echo $imageLeft['url']; ?>" alt="<?php echo $imageLeft['alt']; ?>" />
+			<img src="<?php echo $imageLeft['url']; ?>" alt="<?php echo $imageLeft['alt']; ?>" />
 	    </div>
-	    <div class="col-xs-5 contentArea">
+	    <div class="col-xs-4 contentArea text-center">
 	         <p><?php the_sub_field('white_text_area'); ?></p>
 	    </div>
-	    <div class="col-xs-4 rightImage">
+	    <div class="col-xs-5 rightImage text-right">
 
 	    <?php $imageRight = get_sub_field('right_side_photo'); ?> 
 			
-			<img class="img-responsive-sm" src="<?php echo $imageRight['url']; ?>" alt="<?php echo $imageRight['alt']; ?>" />
+			<img src="<?php echo $imageRight['url']; ?>" alt="<?php echo $imageRight['alt']; ?>" />
 
 	    </div>
+	   </div>
+	   </div>
 	</div>
  
   

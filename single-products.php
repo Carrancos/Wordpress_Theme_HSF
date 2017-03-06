@@ -7,22 +7,27 @@
 <div class="row page-header productIntroBanner <?php echo($slug); ?>">
 <div class="container">
           <div class="col-md-12 row">
-          <div class="col-md-2 logo">
+          <div class="col-md-2 logo text-center">
           
           <?php if( $name === 'Astros') : ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
           
           <?php elseif( $name === 'Cougars') : ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
           
           <?php elseif( $name === 'Rockets') : ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
           
           <?php elseif( $name === 'Dynamo') : ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
 
           <?php elseif( $name === 'Texans') : ?>
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg"><br/>
+            <p>Houston <?php echo($name); ?></p>
           
           <?php endif; ?>
           </div>
@@ -56,7 +61,9 @@
           <?php endwhile; else : ?>
           <?php endif; ?>
             </div>
-            <a href="<?php echo the_field('link'); ?>" class="btn btn-info" role="button" target="_blank">Link Button</a>
+            <div class="text-center">
+              <a href="<?php echo the_field('link'); ?>" class="btn btn-info" role="button" target="_blank">Link Button</a>
+            </div>
           </div>
           <div class="col-md-6 productInformation">
 

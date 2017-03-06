@@ -58,6 +58,12 @@ nav .dropdown:hover ul.sub-menu {
 #search-bar {
   margin-top: 62px; }
 
+.btn.red-cta {
+  background-color: #d21145;
+  color: #FFFFFF; }
+  .btn.red-cta.large {
+    font-size: 36px; }
+
 /*========== Home Page ==========*/
 .productSlider {
   width: 100%;
@@ -74,7 +80,30 @@ nav .dropdown:hover ul.sub-menu {
 .rsImg {
   position: absolute; }
 
+.rsContent .contentArea {
+  height: 373px;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 52px;
+  padding-top: 6%; }
+
+.bannerLogo {
+  max-height: 250px;
+  padding-top: 6%; }
+
+.rightImage {
+  padding-top: 3%; }
+
+.rightImage img {
+  max-height: 290px; }
+
 /*========== Singles Astros Product Page ==========*/
+.productIntroBanner .logo img {
+  max-height: 100px; }
+
+.productIntroBanner .logo > p {
+  font-size: 18px;
+  margin-top: 10px; }
+
 .productIntroBanner.astros {
   background-color: #062853;
   color: #F48412;
