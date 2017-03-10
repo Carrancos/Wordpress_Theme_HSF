@@ -30,14 +30,14 @@
 
         </div>
         <div class="col-md-10">
-          <h1><a href="../">Teams</a> | <?php echo $name ?></h1>
+          <!-- <h1><a href="../">Teams</a> | <?php echo $name ?></h1> -->
         </div>
     </div>
       </div>
       <div class="container">
       <?php 
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="col-md-6">
+          <div class="col-md-4">
           <div class="product">
            <?php if( have_rows('add_images') ): the_row(); ?>            
              

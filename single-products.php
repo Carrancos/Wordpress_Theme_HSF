@@ -62,7 +62,7 @@
           <?php endif; ?>
             </div>
             <div class="text-center">
-              <a href="<?php echo the_field('link'); ?>" class="btn btn-info" role="button" target="_blank">Link Button</a>
+              <a href="<?php echo the_field('link'); ?>" class="btn red-cta medium" role="button" target="_blank">View Product</a>
             </div>
           </div>
           <div class="col-md-6 productInformation">
@@ -90,5 +90,7 @@
 
 
         </div>
+        <div class="clearfix"></div>
+       
     </div>
    <?php get_footer(); ?> 

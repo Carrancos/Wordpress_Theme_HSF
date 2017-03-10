@@ -52,12 +52,15 @@ header {
 	& input{
 		padding:3px 7px;
 		&#s{
-			width:80%;
+			width:100%;
 		}
 		&.search{
 		  font-family: FontAwesome;
 		}
 	}
+}
+.navbar{
+	margin-bottom:0px;
 }
 .navbar-toggle{
 	background-color:$black;
@@ -73,6 +76,7 @@ ul.sub-menu{
 nav .dropdown:hover ul.sub-menu{
 	display: block;
 }
+
 .navbar-nav{
 	font-size:28px;
 	text-transform:uppercase;
@@ -83,16 +87,56 @@ nav .dropdown:hover ul.sub-menu{
 	}
 }
 #search-bar{
-	margin-top:62px;
+	margin-top:74px;
 }
-.btn.red-cta{
+.btn.red-cta, #commentform input#submit{
 	background-color:$red;
 	color:$white;
+	border:1px solid $red;
+	&.medium{
+		font-size:22px;
+	}
 	&.large{
 		font-size:36px;
 	}
 }
-
+.search {
+  width: 100%;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'FontAwesome';
+    content: '\f002';
+    background: $gray;
+    text-align: center;
+    color: $white;
+    border-radius: 5px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smooth: always;
+  }
+}
+.searchTerm {
+  width: 100%;
+  border: 3px solid $gray;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+}
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
 /*========== Home Page ==========*/
 .royalSlider {
   margin-bottom:30px;
@@ -128,7 +172,7 @@ nav .dropdown:hover ul.sub-menu{
 .rightImage img{
 	max-height:290px;
 }
-/*========== Singles Astros Product Page ==========*/
+/*========== Singles Page ==========*/
 .productIntroBanner .logo img{
 	max-height:100px;
 }
@@ -136,12 +180,25 @@ nav .dropdown:hover ul.sub-menu{
 	font-size:18px;
 	margin-top:10px;
 }
+.rsDefault .rsThumb{
+	border:2px solid $gray;	
+	&.rsNavSelected{
+		background:transparent;
+	}
+}
+textarea{
+	&#comment{
+		width:100%;
+	}
+}
+
+/*========== Singles Astros Product Page ==========*/
 .productIntroBanner.astros{
 	background-color:$astrosBlue;
 	color:$astrosOrange;
 	padding:7px 15px;
 	& h1{
-	margin:0;
+	margin:50px 0 0 0;
 	font-size:28px;
 	}
 }
@@ -155,12 +212,13 @@ nav .dropdown:hover ul.sub-menu{
 	padding:7px 15px;
 	}
 }
+/*========== Singles CougarsProduct Page ==========*/
 .productIntroBanner.cougars{
 	background-color:$cougarsRed;
 	color:$white;
 	padding:7px 15px;
 	& h1{
-	margin:0;
+	margin:50px 0 0 0;
 	font-size:28px;
 	}
 }
@@ -179,7 +237,7 @@ nav .dropdown:hover ul.sub-menu{
 	color:$black;
 	padding:7px 15px;
 	& h1{
-	margin:0;
+	margin:50px 0 0 0;
 	font-size:28px;
 	}
 }
@@ -198,7 +256,7 @@ nav .dropdown:hover ul.sub-menu{
 	color:$black;
 	padding:7px 15px;
 	& h1{
-	margin:0;
+	margin:50px 0 0 0;
 	font-size:28px;
 	}
 }
@@ -217,7 +275,7 @@ nav .dropdown:hover ul.sub-menu{
 	color:$texansRed;
 	padding:7px 15px;
 	& h1{
-	margin:0;
+	margin:50px 0 0 0;
 	font-size:28px;
 	}
 }
@@ -400,7 +458,7 @@ footer{
 	.navbar-nav{
 	font-size:32px;
 		&>li>a{
-			padding: 64px 15px;
+			padding: 80px 15px;
 		}
 	}
 	.img-responsive-sm{
