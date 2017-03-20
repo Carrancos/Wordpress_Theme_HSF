@@ -61,12 +61,13 @@
           <?php endwhile; else : ?>
           <?php endif; ?>
             </div>
-            <div class="text-center">
-              <a href="<?php echo the_field('link'); ?>" class="btn red-cta medium" role="button" target="_blank">View Product</a>
-            </div>
           </div>
           <div class="col-md-6 productInformation">
-
+              <div class="price text-left">
+                <p>Price</p>
+                <p><span <?php if( get_field('sale_price') ): ?>class="onSale"<?php endif; ?>><?php the_field('original_price'); ?></span> <?php the_field('sale_price'); ?></p>
+              <a href="<?php echo the_field('link'); ?>" class="btn red-cta small" role="button" target="_blank">add to cart</a>
+            </div>
             <div class="productDescription">
               <h2>Product Description</h2>
               <?php the_field('description');?>

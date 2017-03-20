@@ -21,6 +21,7 @@ $blue:#001A52;
 $white:#FFFFFF;
 $red:#d21145;
 $gray: #D7D7D7;
+$salesColor:#7C7B7A;
 $charcoal: #333333;
 $astrosBlue:#062853;
 $astrosOrange:#F48412;
@@ -87,12 +88,15 @@ nav .dropdown:hover ul.sub-menu{
 	}
 }
 #search-bar{
-	margin-top:74px;
+	margin-top:54px;
 }
 .btn.red-cta, #commentform input#submit{
 	background-color:$red;
 	color:$white;
 	border:1px solid $red;
+	&.small{
+		font-size:18px;
+	}
 	&.medium{
 		font-size:22px;
 	}
@@ -191,7 +195,16 @@ textarea{
 		width:100%;
 	}
 }
-
+.price{
+	margin-bottom:20px;
+	p{
+		font-size:24px;
+	}
+}
+span.onSale{
+	color:$rocketsSilver;
+	text-decoration:line-through;
+}
 /*========== Singles Astros Product Page ==========*/
 .productIntroBanner.astros{
 	background-color:$astrosBlue;
@@ -463,5 +476,8 @@ footer{
 	}
 	.img-responsive-sm{
 		width:auto;
+	}
+	#search-bar{
+		margin-top:74px;
 	}
 }

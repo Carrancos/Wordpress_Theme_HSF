@@ -59,12 +59,14 @@ nav .dropdown:hover ul.sub-menu {
     padding: 64px 13px; }
 
 #search-bar {
-  margin-top: 74px; }
+  margin-top: 54px; }
 
 .btn.red-cta, #commentform input#submit {
   background-color: #d21145;
   color: #FFFFFF;
   border: 1px solid #d21145; }
+  .btn.red-cta.small, #commentform input#submit.small {
+    font-size: 18px; }
   .btn.red-cta.medium, #commentform input#submit.medium {
     font-size: 22px; }
   .btn.red-cta.large, #commentform input#submit.large {
@@ -156,6 +158,15 @@ nav .dropdown:hover ul.sub-menu {
 
 textarea#comment {
   width: 100%; }
+
+.price {
+  margin-bottom: 20px; }
+  .price p {
+    font-size: 24px; }
+
+span.onSale {
+  color: #C4CED3;
+  text-decoration: line-through; }
 
 /*========== Singles Astros Product Page ==========*/
 .productIntroBanner.astros {
@@ -395,6 +406,9 @@ footer {
       padding: 80px 15px; }
 
   .img-responsive-sm {
-    width: auto; } }
+    width: auto; }
+
+  #search-bar {
+    margin-top: 74px; } }
 
 /*# sourceMappingURL=style.css.map */
