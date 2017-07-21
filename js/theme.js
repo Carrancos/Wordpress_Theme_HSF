@@ -30,6 +30,5 @@ jQuery(document).ready(function($) {
       transitionType: 'fade'
   });
 
-
 });
 

@@ -1,10 +1,19 @@
-<div class="col-md-3 sidebar">
+<div id="archive-filters">
 
-	<?php if ( ! dynamic_sidebar ('page') ): ?>
+<?php 
+$field = get_field_object('product_type');
+$values = explode(',', $GET_['product_type']);
+?>
+<ul>
+	<?php foreach( $field('choices') as $choice_value => $choice_label) : ?> 
+		<li>
+			<input type="checkbox" value="<?php echo $choice_value; ?>"
+			<?php if(in_array($choice_value, $values) ) : ?> checked="checked" <?php endif; ?> /> 
+			<?php echo $choice_label; ?>
+		</li>
+	<?php endforeach; ?>
+</ul>
 
-    <h3>Sidebar Setup</h3>
-    <p>Please add widgets to the page sidebar to have them display here.</p>
-    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-
-	<?php endif; ?>
+		
+<?php endforeach; ?>
 </div>
