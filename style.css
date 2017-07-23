@@ -386,6 +386,21 @@ figure.effect-zoe:hover h2 {
   transition-delay: 0.05s; }
 
 /*========== Taxonomy Archive ==========*/
+.pagination .fa {
+  display: inline; }
+.pagination a.page-numbers, .pagination span.page-numbers {
+  color: #000000;
+  padding: 8px 14px;
+  border: 1px solid #001A52;
+  transition: .15s all ease-out; }
+.pagination a.current, .pagination span.current {
+  background-color: #001A52;
+  color: white; }
+.pagination a:hover, .pagination span:hover {
+  background-color: rgba(0, 26, 82, 0.9);
+  color: #FFFFFF;
+  text-decoration: none; }
+
 .archive.tax-teams .product, body.search .product {
   margin-bottom: 60px; }
   .archive.tax-teams .product a, body.search .product a {

@@ -447,6 +447,29 @@ figure.effect-zoe:hover h2 {
 	transition-delay: 0.05s;
 }
 /*========== Taxonomy Archive ==========*/
+.pagination{
+	.fa{
+		display:inline;
+	}
+	a, span{
+		&.page-numbers{
+			color:$black;
+			padding:8px 14px;
+			border:1px solid $blue;
+			transition: .15s all ease-out;
+		}
+		&.current {
+	    	background-color:$blue;
+    		color: white;
+		}
+		&:hover{
+			background-color:transparentize($blue, .1);
+			color:$white;
+			text-decoration:none;
+		}
+	}
+}
+
 .archive.tax-teams, body.search{
 	& .product {
 		margin-bottom:60px;

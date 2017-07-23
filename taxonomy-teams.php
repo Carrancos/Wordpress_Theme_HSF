@@ -55,7 +55,17 @@
 						<?php endif; ?>
 					</div>
 				</div>
-			<?php endwhile; else : ?>
+			<?php endwhile; ?>
+				
+		<?php $args = array(
+			'prev_text'          => __('<i class="fa fa-angle-left" aria-hidden="true"></i>'),
+			'next_text'          => __('<i class="fa fa-angle-right" aria-hidden="true"></i>')
+			);
+		?>
+		<div class="pagination pull-right">
+			<?php echo paginate_links( $args ); ?>
+		</div>
+		<?php else : ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 			<?php endif; ?>
 		</div>
