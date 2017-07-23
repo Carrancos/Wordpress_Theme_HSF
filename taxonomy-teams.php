@@ -35,12 +35,11 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2">
-			<h3>Filter Products</h3>
 			<?php get_sidebar(); ?>
 		</div>
 		<div class="col-md-10">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="col-md-4">
+				<div class="col-sm-4 archiveProduct">
 					<div class="product">
 						<?php if( have_rows('add_images') ): the_row(); ?>
 							<!-- the_sub_field-->
@@ -49,7 +48,10 @@
 							<a href="<?php the_permalink(); ?>">
 								<img class="img-responsive" src="<?php echo $productImage['url']; ?>" alt="<?php echo $productImage['alt']; ?>" />
 							</a> 
-										 
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<div class="price text-left">
+								<p><span <?php if( get_field('sale_price') ): ?>class="onSale"<?php endif; ?>><?php the_field('original_price'); ?></span> <?php the_field('sale_price'); ?></p>
+							</div>
 						<?php endif; ?>
 					</div>
 				</div>

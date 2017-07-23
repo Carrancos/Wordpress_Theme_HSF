@@ -16,6 +16,8 @@ Text Domain: Houston Sports Fan
 /*========== General ==========*/
 body {
   font-family: Oswald, Arial, sans-serif; }
+  body:before {
+    display: none; }
 
 ol, ul {
   list-style: disc;
@@ -60,6 +62,14 @@ nav .dropdown:hover ul.sub-menu {
 
 #search-bar {
   margin-top: 54px; }
+
+li.sf-field-submit input[type="submit"] {
+  background-color: #d21145;
+  color: #FFFFFF;
+  border: 1px solid #d21145;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 6px 10px; }
 
 .btn.red-cta, #commentform input#submit {
   background-color: #d21145;
@@ -376,8 +386,49 @@ figure.effect-zoe:hover h2 {
   transition-delay: 0.05s; }
 
 /*========== Taxonomy Archive ==========*/
-.archive.tax-teams .product {
-  border: 2px solid #000000; }
+.archive.tax-teams .product, body.search .product {
+  margin-bottom: 60px; }
+  .archive.tax-teams .product a, body.search .product a {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none; }
+    .archive.tax-teams .product a:hover, body.search .product a:hover {
+      color: rgba(0, 0, 0, 0.6); }
+.archive.tax-teams .searchandfilter ul, body.search .searchandfilter ul {
+  margin-left: 0px; }
+  .archive.tax-teams .searchandfilter ul h4, .archive.tax-teams .searchandfilter ul li.sf-field-category > ul > li > label, body.search .searchandfilter ul h4, body.search .searchandfilter ul li.sf-field-category > ul > li > label {
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 0px; }
+  .archive.tax-teams .searchandfilter ul li.sf-field-category > ul > li > input, body.search .searchandfilter ul li.sf-field-category > ul > li > input {
+    display: none; }
+
+#archive-filters {
+  border: 1px solid black;
+  padding: 0px 15px;
+  border-radius: 3px;
+  background: #f0f0f0;
+  background: -moz-linear-gradient(top, #f0f0f0 0%, #fefefe 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f0f0f0), color-stop(100%, #fefefe));
+  background: -webkit-linear-gradient(top, #f0f0f0 0%, #fefefe 100%);
+  background: -o-linear-gradient(top, #f0f0f0 0%, #fefefe 100%);
+  background: -ms-linear-gradient(top, #f0f0f0 0%, #fefefe 100%);
+  background: linear-gradient(to bottom, #f0f0f0 0%, #fefefe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#fefefe', GradientType=0 ); }
+
+/*========== Search Page ==========*/
+body.search .page-header p {
+  font-size: 24px; }
+body.search .product {
+  margin-bottom: 60px; }
+body.search .searchandfilter ul {
+  margin-left: 0px; }
+  body.search .searchandfilter ul h4, body.search .searchandfilter ul li.sf-field-category > ul > li > label {
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 0px; }
+  body.search .searchandfilter ul li.sf-field-category > ul > li > input {
+    display: none; }
 
 /*========== Footer ==========*/
 footer {

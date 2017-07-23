@@ -30,5 +30,18 @@ jQuery(document).ready(function($) {
       transitionType: 'fade'
   });
 
+  // wrap every 3 items into a row div
+  var rowFunction = function(){
+  var row = $(".archiveProduct");
+  var i = row.length;
+
+  for(var i = 0; i < row.length; i+=3) {
+    row.slice(i, i+3).wrapAll("<div class='row'></div>");
+  }
+
+};
+  // call rowFunction
+  rowFunction();
+
 });
 

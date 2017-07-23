@@ -40,6 +40,9 @@ $secondaryFont: Helvetica, Arial, sans-serif;
 /*========== General ==========*/
 body{
 	font-family:$font-family;
+	&:before {
+	    display:none;
+  }
 }
 ol, ul {
 	list-style: disc;
@@ -90,6 +93,15 @@ nav .dropdown:hover ul.sub-menu{
 #search-bar{
 	margin-top:54px;
 }
+li.sf-field-submit input[type="submit"]{
+	background-color: #d21145;
+    color: #FFFFFF;
+    border: 1px solid #d21145;
+    font-size:16px;
+    border-radius:8px;
+    padding:6px 10px;
+}
+
 .btn.red-cta, #commentform input#submit{
 	background-color:$red;
 	color:$white;
@@ -435,11 +447,67 @@ figure.effect-zoe:hover h2 {
 	transition-delay: 0.05s;
 }
 /*========== Taxonomy Archive ==========*/
-.archive.tax-teams{
+.archive.tax-teams, body.search{
 	& .product {
-	border:2px solid #000000;
+		margin-bottom:60px;
+		a{
+			font-size:16px;
+			color:$black;
+			text-decoration:none;
+			&:hover{
+				color:transparentize($black, .4);
+			}
+		}
+	}
+	& .searchandfilter ul{
+		margin-left:0px;
+		h4, li.sf-field-category > ul > li > label{
+			font-size:24px;
+			line-height:24px;
+			padding-left:0px;
+		}
+		li.sf-field-category > ul > li > input{
+			display:none;
+		}
 	}
 }
+#archive-filters{
+	border: 1px solid black;
+	padding: 0px 15px;
+	border-radius: 3px;
+	
+	background: rgba(240,240,240,1);
+	background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(240,240,240,1)), color-stop(100%, rgba(254,254,254,1)));
+	background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 100%);
+	background: -o-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 100%);
+	background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 100%);
+	background: linear-gradient(to bottom, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#fefefe', GradientType=0 );
+}
+/*========== Search Page ==========*/
+body.search{
+	.page-header{
+		p{
+			font-size:24px;
+		}
+	}
+	& .product {
+		margin-bottom:60px;
+	}
+	& .searchandfilter ul{
+		margin-left:0px;
+		h4, li.sf-field-category > ul > li > label{
+			font-size:24px;
+			line-height:24px;
+			padding-left:0px;
+		}
+		li.sf-field-category > ul > li > input{
+			display:none;
+		}
+	}
+}
+
 /*========== Footer ==========*/
 footer{
 	background-color:$charcoal;

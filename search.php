@@ -1,28 +1,44 @@
-<?php get_header(); ?>
+<?php get_header() ?>
+
+<div class="page-header productIntroBanner rockets">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <p>Product Results</p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
-     
-        <div class="col-md-12 listresults">
-          
+     <div class="row">
+    <div class="col-md-2">
+      <?php get_sidebar(); ?>
+    </div>
+    <div class="col-md-10">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <div class="page-header">
-            <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+          <div class="col-sm-4 archiveProduct">
+          <div class="product">
+            <?php if( have_rows('add_images') ): the_row(); ?>
+              <!-- the_sub_field-->
+              <?php $productImage = get_sub_field('image'); ?>
+              
+              <a href="<?php the_permalink(); ?>">
+                <img class="img-responsive" src="<?php echo $productImage['url']; ?>" alt="<?php echo $productImage['alt']; ?>" />
+              </a> 
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              <div class="price text-left">
+                <p><span <?php if( get_field('sale_price') ): ?>class="onSale"<?php endif; ?>><?php the_field('original_price'); ?></span> <?php the_field('sale_price'); ?></p>
+              </div>
+            <?php endif; ?>
           </div>
-          
-          <hr>
-
-        <?php endwhile; else: ?>
-          
-          <div class="page-header">
-            <h1>Your search has no results</h1>
-          </div>
-
-          <p>No Content is appearing for this page! Please try a different search</p>
-
-          <?php endif; ?>
-        
-
         </div>
+      <?php endwhile; else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
         
 
    <?php get_footer(); ?> 

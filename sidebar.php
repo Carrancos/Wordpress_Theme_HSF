@@ -1,19 +1,13 @@
 <div id="archive-filters">
+<?php
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-<?php 
-$field = get_field_object('product_type');
-$values = explode(',', $GET_['product_type']);
+if (strpos($url,'672') !== false) {
+    echo do_shortcode('[searchandfilter id="680"]');
+} else {
+    echo do_shortcode('[searchandfilter id="672"]');
+}
 ?>
-<ul>
-	<?php foreach( $field('choices') as $choice_value => $choice_label) : ?> 
-		<li>
-			<input type="checkbox" value="<?php echo $choice_value; ?>"
-			<?php if(in_array($choice_value, $values) ) : ?> checked="checked" <?php endif; ?> /> 
-			<?php echo $choice_label; ?>
-		</li>
-	<?php endforeach; ?>
-</ul>
+	
 
-		
-<?php endforeach; ?>
 </div>
