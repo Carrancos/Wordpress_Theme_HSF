@@ -276,7 +276,7 @@ span.onSale{
 	padding:7px 15px;
 	}
 }
-.productIntroBanner.rockets{
+.productIntroBanner.rockets, .productIntroBanner.general{
 	background-color:$rocketsSilver;
 	color:$black;
 	padding:7px 15px;
@@ -471,6 +471,9 @@ figure.effect-zoe:hover h2 {
 }
 
 .archive.tax-teams, body.search{
+	li.sf-field-taxonomy-teams{
+		display:none;
+	}
 	& .product {
 		margin-bottom:60px;
 		a{

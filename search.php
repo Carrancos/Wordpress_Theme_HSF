@@ -1,14 +1,51 @@
 <?php get_header() ?>
+<?php
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-<div class="page-header productIntroBanner rockets">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-          <p>Product Results</p>
-      </div>
+if ( strpos($url,'rockets') !== false ) :
+  $team = 'rockets';
+elseif ( strpos($url,'texans') !== false ) :
+  $team = 'texans';
+elseif ( strpos($url,'dynamo') !== false ) :
+  $team = 'dynamo';
+elseif ( strpos($url,'cougars') !== false ) :
+  $team = 'cougars';
+elseif ( strpos($url,'astros') !== false ) :
+  $team = 'astros';
+else :
+  $team = 'general';
+endif;
+?>
+
+<div class="row page-header productIntroBanner <?php echo($team); ?>">
+      <div class="container">
+        <div class="col-md-2">
+
+         <?php       
+            if( $team === 'astros') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston-Astros-Logo.svg">
+            
+            <?php elseif( $team === 'cougars') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/University_of_Houston_Logo.svg">
+            
+            <?php elseif( $team === 'rockets') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Rockets.svg">
+            
+            <?php elseif( $team === 'dynamo') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Dynamo_logo.svg">
+
+            <?php elseif( $team === 'texans') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Houston_Texans_logo.svg">
+            <?php elseif( $team === 'general') : ?>
+              <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/hsf-logo.svg">
+            <?php endif; ?>
+
+        </div>
+        <div class="col-md-10">
+          <h1>Product Results</h1>
+        </div>
     </div>
-  </div>
-</div>
+      </div>
 <div class="container">
      <div class="row">
     <div class="col-md-2">
@@ -16,8 +53,7 @@
     </div>
     <div class="col-md-10">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-          <div class="col-sm-4 archiveProduct">
+<div class="col-sm-3 archiveProduct">
           <div class="product">
             <?php if( have_rows('add_images') ): the_row(); ?>
               <!-- the_sub_field-->

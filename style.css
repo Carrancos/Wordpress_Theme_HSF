@@ -231,11 +231,11 @@ span.onSale {
     color: #000000;
     padding: 7px 15px; }
 
-.productIntroBanner.rockets {
+.productIntroBanner.rockets, .productIntroBanner.general {
   background-color: #C4CED3;
   color: #000000;
   padding: 7px 15px; }
-  .productIntroBanner.rockets h1 {
+  .productIntroBanner.rockets h1, .productIntroBanner.general h1 {
     margin: 50px 0 0 0;
     font-size: 28px; }
 
@@ -401,6 +401,8 @@ figure.effect-zoe:hover h2 {
   color: #FFFFFF;
   text-decoration: none; }
 
+.archive.tax-teams li.sf-field-taxonomy-teams, body.search li.sf-field-taxonomy-teams {
+  display: none; }
 .archive.tax-teams .product, body.search .product {
   margin-bottom: 60px; }
   .archive.tax-teams .product a, body.search .product a {

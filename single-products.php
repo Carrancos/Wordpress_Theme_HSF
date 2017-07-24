@@ -66,7 +66,7 @@
               <div class="price text-left">
                 <p>Price</p>
                 <p><span <?php if( get_field('sale_price') ): ?>class="onSale"<?php endif; ?>><?php the_field('original_price'); ?></span> <?php the_field('sale_price'); ?></p>
-              <a href="<?php echo the_field('link'); ?>" class="btn red-cta small" role="button" target="_blank">add to cart</a>
+              <a href="<?php echo the_field('link'); ?>" class="btn red-cta small" role="button" target="_blank">buy now</a>
             </div>
             <div class="productDescription">
               <h2>Product Description</h2>

@@ -30,13 +30,13 @@ jQuery(document).ready(function($) {
       transitionType: 'fade'
   });
 
-  // wrap every 3 items into a row div
+  // wrap every 4 items into a row div
   var rowFunction = function(){
   var row = $(".archiveProduct");
   var i = row.length;
 
-  for(var i = 0; i < row.length; i+=3) {
-    row.slice(i, i+3).wrapAll("<div class='row'></div>");
+  for(var i = 0; i < row.length; i+=4) {
+    row.slice(i, i+4).wrapAll("<div class='row'></div>");
   }
 
 };

@@ -39,7 +39,7 @@
 		</div>
 		<div class="col-md-10">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="col-sm-4 archiveProduct">
+				<div class="col-sm-3 archiveProduct">
 					<div class="product">
 						<?php if( have_rows('add_images') ): the_row(); ?>
 							<!-- the_sub_field-->
