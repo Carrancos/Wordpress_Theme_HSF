@@ -39,7 +39,9 @@ header {
   margin-bottom: 0px; }
 
 .navbar-toggle {
-  background-color: #000000; }
+  background-color: #00123F; }
+  .navbar-toggle .icon-bar {
+    border-bottom: 1px solid #FFFFFF; }
 
 .navbar-brand {
   height: auto; }
@@ -53,15 +55,13 @@ nav .dropdown:hover ul.sub-menu {
   display: block; }
 
 .navbar-nav {
-  font-size: 28px;
-  text-transform: uppercase;
-  font-weight: bold; }
+  text-transform: uppercase; }
   .navbar-nav > li > a {
     color: #001A52;
     padding: 64px 13px; }
 
 #search-bar {
-  margin-top: 54px; }
+  margin-top: 30px; }
 
 li.sf-field-submit input[type="submit"] {
   background-color: #d21145;
@@ -104,7 +104,7 @@ li.sf-field-submit input[type="submit"] {
 .searchTerm {
   width: 100%;
   border: 3px solid #D7D7D7;
-  padding: 10px;
+  padding: 8px 5px;
   height: 40px;
   border-radius: 5px;
   outline: none; }
@@ -140,7 +140,7 @@ li.sf-field-submit input[type="submit"] {
 .rsContent .contentArea {
   height: 373px;
   background: rgba(255, 255, 255, 0.3);
-  font-size: 52px;
+  font-size: 28px;
   padding-top: 6%; }
 
 .bannerLogo {
@@ -464,14 +464,53 @@ footer {
       text-decoration: none; }
 
 /*========== Media Query ==========*/
+@media (min-width: 768px) {
+  .navbar-nav {
+    font-size: 20px; }
+    .navbar-nav > li > a {
+      padding: 30px 5px; }
+
+  #search-bar {
+    margin-top: 20px; }
+
+  header#s {
+    float: right; }
+  header .searchButton {
+    float: right; } }
+@media (min-width: 992px) {
+  .navbar-nav {
+    font-size: 24px; }
+    .navbar-nav > li > a {
+      padding: 50px 10px; }
+
+  #search-bar {
+    margin-top: 40px; } }
+@media (min-width: 1200px) {
+  .searchTerm {
+    padding: 10px; }
+
+  #search-bar {
+    margin-top: 54px; }
+
+  .rsContent .contentArea {
+    font-size: 42px; }
+
+  .navbar-nav {
+    font-weight: bold;
+    font-size: 30px; }
+    .navbar-nav > li > a {
+      padding: 66px 10px; } }
 @media screen and (min-width: 1460px) {
+  .rsContent .contentArea {
+    font-size: 52px; }
+
   .container {
     width: 1430px; }
 
   .navbar-nav {
-    font-size: 32px; }
+    font-size: 20px; }
     .navbar-nav > li > a {
-      padding: 80px 15px; }
+      padding: 10px 7px; }
 
   .img-responsive-sm {
     width: auto; }

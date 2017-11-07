@@ -31,8 +31,10 @@ $texansBlue:#00123F;
 $texansRed:#C9243F;
 $dynamoOrange:#F89d3F;
 $cougarsRed:#C8102E;
-$break-normal:1200px;
-$break-large:1460px;
+$break-small:768px;
+$break-normal:992px;
+$break-large:1200px;
+$break-xlarge:1460px;
 
 $font-family: Oswald, Arial, sans-serif;
 $secondaryFont: Helvetica, Arial, sans-serif;
@@ -67,7 +69,10 @@ header {
 	margin-bottom:0px;
 }
 .navbar-toggle{
-	background-color:$black;
+	background-color:$texansBlue;
+	.icon-bar{
+		border-bottom:1px solid $white;
+	}
 }
 .navbar-brand{
 	height: auto;
@@ -82,16 +87,14 @@ nav .dropdown:hover ul.sub-menu{
 }
 
 .navbar-nav{
-	font-size:28px;
 	text-transform:uppercase;
-	font-weight:bold;
 	&>li>a{
 	color:$blue;
 	padding: 64px 13px;
 	}
 }
 #search-bar{
-	margin-top:54px;
+	margin-top:30px;
 }
 li.sf-field-submit input[type="submit"]{
 	background-color: #d21145;
@@ -139,7 +142,7 @@ li.sf-field-submit input[type="submit"]{
 .searchTerm {
   width: 100%;
   border: 3px solid $gray;
-  padding: 10px;
+  padding: 8px 5px;
   height: 40px;
   border-radius: 5px;
   outline: none;
@@ -175,7 +178,7 @@ li.sf-field-submit input[type="submit"]{
 .rsContent .contentArea{
 	height:373px;
 	background:rgba(255,255,255,.3);
-	font-size:52px;
+	font-size:28px;
 	padding-top:6%
 }
 .bannerLogo{
@@ -554,19 +557,67 @@ footer{
 }
 
 /*========== Media Query ==========*/
-@media (min-width: $break-normal){
-	
+@media (min-width: $break-small){
+	.navbar-nav{
+		font-size:20px;
+			&>li>a{
+				padding: 30px 5px;
+		}
+	}
+	#search-bar{
+		margin-top:20px;
+	}
+	header{
+		&#s{
+			float:right;
+		}
+		.searchButton {
+			float:right;
+		}
+	}
 }
-
-@media screen and (min-width: $break-large) {
-	.container{
-		width:$break-large - 30px;
+@media (min-width: $break-normal){
+	.navbar-nav{
+		font-size:24px;
+			&>li>a{
+				padding: 50px 10px;
+		}
+	}
+	#search-bar{
+		margin-top:40px;
+	}
+}
+@media (min-width: $break-large){
+	.searchTerm {
+		padding:10px;
+	}
+	#search-bar{
+		margin-top:54px;
+	}
+	.rsContent .contentArea{
+		font-size:42px;
 	}
 	.navbar-nav{
-	font-size:32px;
-		&>li>a{
-			padding: 80px 15px;
+		font-weight:bold;
+		font-size:30px;
+			&>li>a{
+				padding: 66px 10px;
 		}
+	}
+}
+
+@media screen and (min-width: $break-xlarge) {
+	.rsContent .contentArea{
+		font-size:52px;
+	}
+	.container{
+		width:$break-xlarge - 30px;
+	}
+	.navbar-nav{
+		font-size:20px;
+			&>li>a{
+				padding: 10px 7px;
+			}
 	}
 	.img-responsive-sm{
 		width:auto;
